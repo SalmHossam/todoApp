@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
+import 'colors.dart';
 class MyThemeData{
-  static Color primaryColor=Color (0xFFDFECDB);
-  static Color darkprimaryColor=Color (0xFF060E1E);
-  static Color blackColor=Color (0xFF242424);
-  static Color blue=Color(0xff5D9CEC);
-  static Color yellow=Color(0xffFACC1D);
   static ThemeData lightTheme=ThemeData(
       colorScheme: ColorScheme(
           brightness: Brightness.light,
-          primary: Colors.white,
-          onPrimary: blackColor,
-          secondary: blackColor,
+          primary: primaryColor,
+          onPrimary: Colors.white,
+          secondary: blue,
           onSecondary: blackColor,
           error: Colors.red,
           onError: Colors.white,
@@ -18,17 +14,11 @@ class MyThemeData{
           onBackground: Colors.black,
           surface: primaryColor,
           onSurface: Colors.white),
-      scaffoldBackgroundColor:Colors.transparent,
-      appBarTheme: AppBarTheme(
-          color:Colors.transparent,
-          elevation: 0.0,
-          centerTitle: true
-      ),
+      scaffoldBackgroundColor:primaryColor,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        type: BottomNavigationBarType.shifting,
-        selectedItemColor: Colors.black,
-        backgroundColor: primaryColor,
-        unselectedItemColor: Colors.white,
+        selectedItemColor: Colors.blue,
+        backgroundColor: Colors.white,
+
 
       )
   );

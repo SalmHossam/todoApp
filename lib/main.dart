@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/style/MyTheme.dart';
 import 'layout/home.dart';
 
 void main() {
@@ -19,6 +20,8 @@ class MyApp extends StatelessWidget {
 
 
       },
+       theme: MyThemeData.lightTheme,
+       //darkTheme: ThemeData.dark(),
 
     );
   }

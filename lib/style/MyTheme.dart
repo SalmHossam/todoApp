@@ -4,19 +4,19 @@ class MyThemeData{
   static ThemeData lightTheme=ThemeData(
       colorScheme: ColorScheme(
           brightness: Brightness.light,
-          primary: primaryColor,
+          primary: Colors.blue,
           onPrimary: Colors.white,
           secondary: blue,
           onSecondary: blackColor,
           error: Colors.red,
           onError: Colors.white,
-          background: primaryColor,
+          background: Colors.blue,
           onBackground: Colors.black,
-          surface: primaryColor,
+          surface: Colors.blue,
           onSurface: Colors.white),
       scaffoldBackgroundColor:primaryColor,
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
-        selectedItemColor: Colors.blue,
+        selectedItemColor: blue,
         backgroundColor: Colors.white,
 
 

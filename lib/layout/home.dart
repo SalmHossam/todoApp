@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:todo_app/screens/tasks/add_task_bottomSheet.dart';
 import 'package:todo_app/screens/tasks/tasksTab.dart';
 import 'package:todo_app/style/MyTheme.dart';
 import 'package:calendar_timeline/calendar_timeline.dart';
@@ -19,6 +20,7 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBody: true,
       appBar: AppBar(
         title: Text('Todo List',style: TextStyle(fontSize: 30),),
         backgroundColor: Theme.of(context).colorScheme.secondary,
@@ -47,8 +49,20 @@ class _HomeState extends State<Home> {
       floatingActionButton: FloatingActionButton(
         child: Icon(Icons.add,color: Colors.white,),
         backgroundColor:Theme.of(context).colorScheme.secondary ,
-        onPressed: () {  },),
+        onPressed: () {
+          showSheet();
+        },),
 
     );
+  }
+  void showSheet(){
+    showModalBottomSheet(context: context,
+      isScrollControlled: true,
+      builder: (context) {
+      return Padding(
+        padding: EdgeInsets.only(bottom: MediaQuery.of(context).viewInsets.bottom),
+        child: AddTaskBottomSheet(),
+      );
+    }, );
   }
 }
